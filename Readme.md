@@ -2,7 +2,7 @@
 
 * Студент: [Рамиль Зарипов](https://up.htmlacademy.ru/htmlcss-individual/2/user/241042).
 * Наставник: [Дина Шарипова](https://htmlacademy.ru/profile/id1418957).
-
+* Сайт: [Мой проект Седона] (https://zarram89.github.io/241042-sedona-2/)
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
