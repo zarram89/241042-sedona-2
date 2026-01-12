@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Рамиль Зарипов](https://up.htmlacademy.ru/htmlcss-individual/2/user/241042).
-* Наставник: `Неизвестно`.
+* Наставник: [Дина Шарипова](https://htmlacademy.ru/profile/id1418957).
 
 ---
 
