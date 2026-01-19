@@ -8,47 +8,47 @@
 <body>
 <div class="page-container">
   <header class="page-header" data-test="header">
-      <nav class="navigation">
-        <a class="navigation__logo" href="index.html">
-          <img
-            class="navigation__logo-image"
-            src="images/logo.svg"
-            width="140"
-            height="70"
-            alt="Логотип Седона">
-        </a>
-        <ul class="navigation__list list-reset">
-          <li class="navigation__item">
-            <a class="navigation__link navigation__link--current"
-               href="index.html"
-               aria-current="page">
-              Главная
-            </a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">О Седоне</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="catalog.html">Гостиницы</a>
-          </li>
-        </ul>
-        <ul class="navigation__list navigation__list--user list-reset">
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">
-              <span class="visually-hidden">Поиск</span>
-            </a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">
-              <span class="visually-hidden">В избранном</span>
-              <span class="navigation__favorites-count">12</span>
-            </a>
-          </li>
-          <li class="navigation__item">
-            <a class="button" href="#">Хочу сюда!</a>
-          </li>
-        </ul>
-      </nav>
+    <nav class="navigation">
+      <a class="navigation__logo" href="index.html">
+        <img
+          class="navigation__logo-image"
+          src="images/logo.svg"
+          width="140"
+          height="70"
+          alt="Логотип Седона">
+      </a>
+      <ul class="navigation__list list-reset">
+        <li class="navigation__item">
+          <a class="navigation__link navigation__link--current"
+             href="index.html"
+             aria-current="page">
+            Главная
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">О Седоне</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="catalog.html">Гостиницы</a>
+        </li>
+      </ul>
+      <ul class="navigation__list navigation__list--user list-reset">
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">
+            <span class="visually-hidden">Поиск</span>
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">
+            <span class="visually-hidden">В избранном</span>
+            <span class="navigation__favorites-count">12</span>
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a class="button" href="#">Хочу сюда!</a>
+        </li>
+      </ul>
+    </nav>
   </header>
   <main class="main main--index" data-test="main">
     <section class="hero" data-test="hero">
@@ -77,16 +77,22 @@
                alt="Уютная улица Седоны">
         </li>
         <li class="advantages__item">
-          <h3 class="advantages__item-title item-title">Небольшая площадь</h3>
-          <p class="advantages__item-text item-text">Все достопримечательности находятся очень близко</p>
+          <div class="advantages__item-content">
+            <h3 class="advantages__item-title item-title">Небольшая площадь</h3>
+            <p class="advantages__item-text item-text">Все достопримечательности находятся очень близко</p>
+          </div>
         </li>
         <li class="advantages__item">
-          <h3 class="advantages__item-title item-title">Красивая дорога</h3>
-          <p class="advantages__item-text item-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          <div class="advantages__item-content">
+            <h3 class="advantages__item-title item-title">Красивая<br> дорога</h3>
+            <p class="advantages__item-text item-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          </div>
         </li>
         <li class="advantages__item">
-          <h3 class="advantages__item-title item-title">Мало туристов</h3>
-          <p class="advantages__item-text item-text">Большинство едет в Гранд Каньон и толпится там</p>
+          <div class="advantages__item-content">
+            <h3 class="advantages__item-title item-title">Мало<br> туристов</h3>
+            <p class="advantages__item-text item-text">Большинство едет в Гранд Каньон и толпится там</p>
+          </div>
         </li>
         <li class="advantages__item advantages__item--image">
           <div class="advantages__item-content">
