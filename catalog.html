@@ -42,9 +42,10 @@
     <a class="button page-header-button" href="#">Хочу сюда!</a>
   </header>
   <main class="main main-inner">
+    <h1 class="visually-hidden">Каталог Седоны</h1>
     <section class="catalog">
       <div class="inner-header">
-        <h1 class="inner-header-title">Гостиницы Седоны</h1>
+        <h2 class="inner-header-title">Гостиницы Седоны</h2>
 
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
@@ -97,16 +98,16 @@
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="visually-hidden control-input" type="radio" name="type" value="motel">
+                  <input class="visually-hidden control-input" type="radio" name="type" value="apartment">
                   <span class="control-mark"></span>
-                  <span class="control-label">Мотель</span>
+                  <span class="control-label">Апартаменты</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="visually-hidden control-input" type="radio" name="type" value="apartment">
+                  <input class="visually-hidden control-input" type="radio" name="type" value="motel">
                   <span class="control-mark"></span>
-                  <span class="control-label">Апартаменты</span>
+                  <span class="control-label">Мотель</span>
                 </label>
               </li>
             </ul>
@@ -130,7 +131,7 @@
               <div class="range-scale">
                 <div class="range-bar" style="left: 0; width: 226px">
                   <button class="range-toggle toggle-min" type="button">
-                        <span class="visually-hidden">Изменить миинимальцую
+                        <span class="visually-hidden">Изменить минимальную
                           цену</span>
                   </button>
                   <button class="range-toggle toggle-max" type="button">
@@ -182,12 +183,12 @@
         <ul class="catalog-list">
           <li class="hotel-card">
             <article class="hotel-card-inner">
-              <a class="hotel-card-image-link" href="#">
+              <a class="hotel-card-image-link" href="#" tabindex="-1">
                 <img class="hotel-card-image" src="images/catalog/1.jpg" width="300" height="212"
                      alt="Ночное звездное небо из пещеры в Седоне">
               </a>
               <h3 class="hotel-card-title">
-                <a class="hotel-card-title-link" href="#" tabindex="-1">Amara Resort & Spa</a>
+                <a class="hotel-card-title-link" href="#">Amara Resort & Spa</a>
               </h3>
               <p class="hotel-card-type">Гостиница</p>
               <p class="hotel-card-price">от 4000 ₽</p>
@@ -208,7 +209,7 @@
                      alt="Радуга над горами Седоны">
               </a>
               <h3 class="hotel-card-title">
-                <a class="hotel-card-title-link" href="#" tabindex="-1">Villas at Poco Diablo</a>
+                <a class="hotel-card-title-link" href="#">Villas at Poco Diablo</a>
               </h3>
               <p class="hotel-card-type">Гостиница</p>
               <p class="hotel-card-price">от 5000 ₽</p>
@@ -228,7 +229,7 @@
                      alt="Деревья у подножия гор Седоны">
               </a>
               <h3 class="hotel-card-title">
-                <a class="hotel-card-title-link" href="#" tabindex="-1">Desert Quail Inn</a>
+                <a class="hotel-card-title-link" href="#">Desert Quail Inn</a>
               </h3>
               <p class="hotel-card-type">Гостиница</p>
               <p class="hotel-card-price">от 2500 ₽</p>
@@ -251,7 +252,7 @@
                      alt="Ночное небо и горы Седоны">
               </a>
               <h3 class="hotel-card-title">
-                <a class="hotel-card-title-link title-text" href="#" tabindex="-1">GreenTree Inn
+                <a class="hotel-card-title-link title-text" href="#">GreenTree Inn
                 </a>
               </h3>
               <p class="hotel-card-type">Гостиница</p>
@@ -281,7 +282,7 @@
             <a class="pagination-link" href="#">4</a>
           </li>
           <li class="pagination-item pagination-item-ellipsis">
-            <span aria-hidden="true">…</span>
+            <span aria-hidden="true">...</span>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">10</a>
@@ -306,7 +307,7 @@
           class="social-link social-link-vk"
           href="https://vk.com/htmlacademy"
           target="_blank"
-          rel="noopener"
+          rel="noreferrer noopener"
         >
           <span class="visually-hidden">VK</span>
         </a>
@@ -316,7 +317,8 @@
           class="social-link social-link-tg"
           href="https://t.me/htmlacademy"
           target="_blank"
-          rel="noopener">
+          rel="noreferrer noopener"
+        >
           <span class="visually-hidden">Telegram</span>
         </a>
       </li>
@@ -325,7 +327,8 @@
           class="social-link social-link-yt"
           href="https://www.youtube.com/user/htmlacademyru"
           target="_blank"
-          rel="noopener">
+          rel="noreferrer noopener"
+        >
           <span class="visually-hidden">YouTube</span>
         </a>
       </li>
@@ -335,7 +338,7 @@
       class="page-footer-academy-link"
       href="https://htmlacademy.ru/"
       target="_blank"
-      rel="noopener"
+      rel="noreferrer noopener"
     >
       <span class="visually-hidden">HTML Academy</span>
     </a>

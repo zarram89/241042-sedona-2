@@ -106,7 +106,7 @@
       <p class="search-description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения
         гостиниц в
         Седоне</p>
-      <button class="button button-big" type="button">Поиск гостиницы в Седоне</button>
+      <button class="search-button button button-big" type="button">Поиск гостиницы в Седоне</button>
     </section>
     <section class="subscribe">
       <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
@@ -125,7 +125,7 @@
           class="social-link social-link-vk"
           href="https://vk.com/htmlacademy"
           target="_blank"
-          rel="noopener"
+          rel="noreferrer noopener"
         >
           <span class="visually-hidden">VK</span>
         </a>
@@ -135,7 +135,8 @@
           class="social-link social-link-tg"
           href="https://t.me/htmlacademy"
           target="_blank"
-          rel="noopener">
+          rel="noreferrer noopener"
+        >
           <span class="visually-hidden">Telegram</span>
         </a>
       </li>
@@ -144,7 +145,8 @@
           class="social-link social-link-yt"
           href="https://www.youtube.com/user/htmlacademyru"
           target="_blank"
-          rel="noopener">
+          rel="noreferrer noopener"
+        >
           <span class="visually-hidden">YouTube</span>
         </a>
       </li>
@@ -154,7 +156,7 @@
       class="page-footer-academy-link"
       href="https://htmlacademy.ru/"
       target="_blank"
-      rel="noopener"
+      rel="noreferrer noopener"
     >
       <span class="visually-hidden">HTML Academy</span>
     </a>
@@ -177,13 +179,13 @@
         <p class="field-group">
           <label class="search-form-label" for="search-checkin">Дата заезда:</label>
           <input class="search-form-input input-date" type="text" name="search-checkin"
-           value="27 апреля 2020" id="search-checkin" placeholder="Укажите дату" required>
+                 value="27 апреля 2020" id="search-checkin" placeholder="Укажите дату" required>
           <span class="modal-field-message modal-field-message-error">Мы не можем отправить вас в прошлое.</span>
         </p>
         <p class="field-group">
           <label class="search-form-label" for="search-checkout">Дата выезда:</label>
           <input class="search-form-input input-date" type="text" name="search-checkout"
-           value="1 сентября 2023" id="search-checkout" placeholder="Укажите дату" required>
+                 value="1 сентября 2023" id="search-checkout" placeholder="Укажите дату" required>
           <span class="modal-field-message">На эти даты есть свободные номера. Пока есть.</span>
         </p>
         <p class="field-group field-group-count">
@@ -192,11 +194,11 @@
             <span class="input-count-container">
             <button class="input-count-button input-count-button-minus" type="button">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"
-               xmlns="http://www.w3.org/2000/svg"><path d="M0 6v2h8h6V6Z"/></svg>
+                   xmlns="http://www.w3.org/2000/svg"><path d="M0 6v2h8h6V6Z"/></svg>
               <span class="visually-hidden">Уменьшить количество взрослых</span>
             </button>
             <input class="search-form-input input-count" type="number" name="search-adults"
-             value="2" placeholder="1" id="search-adults" required>
+                   value="2" placeholder="1" id="search-adults" required>
             <button class="input-count-button input-count-button-plus" type="button">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path
               d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z"/></svg>
@@ -210,7 +212,10 @@
               <span class="tooltip">
                 <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
                   <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="currentColor"
-                   xmlns="http://www.w3.org/2000/svg"><circle cx="13" cy="13" r="13"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" fill="#ffffff"/>
+                       xmlns="http://www.w3.org/2000/svg"><circle cx="13" cy="13" r="13"/><path fill-rule="evenodd"
+                                                                                                clip-rule="evenodd"
+                                                                                                d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z"
+                                                                                                fill="#ffffff"/>
                   </svg>
                 </button>
                 <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
@@ -219,14 +224,14 @@
             <span class="input-count-container">
               <button class="input-count-button input-count-button-minus" type="button">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"
-                 xmlns="http://www.w3.org/2000/svg"><path d="M0 6v2h8h6V6Z"/></svg>
+                     xmlns="http://www.w3.org/2000/svg"><path d="M0 6v2h8h6V6Z"/></svg>
                 <span class="visually-hidden">Уменьшить количество детей</span>
               </button>
               <input class="search-form-input input-count" type="number" id="search-kids" name="search-kids"
-               value="2" placeholder="1" required>
+                     value="2" placeholder="1" required>
               <button class="input-count-button input-count-button-plus" type="button">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"
-               xmlns="http://www.w3.org/2000/svg"><path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z"/></svg>
+                   xmlns="http://www.w3.org/2000/svg"><path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z"/></svg>
               <span class="visually-hidden">Увеличить количество детей</span>
               </button>
               </span>

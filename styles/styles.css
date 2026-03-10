@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: > 2% and last 1 version
+*/
+
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -15,8 +22,8 @@
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -73,14 +80,14 @@ img {
 
 .button::before {
   content: "";
-  height: 1em;
   display: inline-block;
+  height: 1em;
   vertical-align: middle;
 }
 
 .button:not(:disabled):hover,
 .button:not(:disabled):focus-visible {
-  background-color: #615048
+  background-color: #615048;
 }
 
 .button:not(:disabled):active {
@@ -129,6 +136,13 @@ img {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.button-reset:disabled {
+  color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+  cursor: default;
+  background-color: transparent;
+}
+
 .button-big {
   padding: 8px 50px;
   font-size: 20px;
@@ -142,13 +156,7 @@ img {
   min-height: 100%;
   margin: 0 auto;
   background-color: #ffffff;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
-}
-
-.page-container {
-  width: 1280px;
-  margin: 0 auto;
-  background: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .page-header {
@@ -161,12 +169,12 @@ img {
 }
 
 .logo {
-  margin-right: 28px;
+  align-self: flex-start;
+  z-index: 1;
   width: 140px;
   height: 70px;
-  align-self: flex-start;
+  margin-right: 28px;
   margin-bottom: -6px;
-  z-index: 1;
 }
 
 .navigation {
@@ -452,7 +460,7 @@ img {
 }
 
 .subscribe {
-  padding-top: 96px;
+  padding-top: 97px;
   padding-bottom: 104px;
   text-align: center;
   color: #ffffff;
@@ -465,7 +473,7 @@ img {
 
 .subscribe-title {
   width: 475px;
-  margin:0 auto 20px;
+  margin: 0 auto 20px;
   font-size: 30px;
   text-transform: uppercase;
   line-height: 36px;
@@ -535,8 +543,11 @@ img {
 .social-link::before {
   content: "";
   background-color: #83b3d3;
+  -webkit-mask-size: contain;
   mask-size: contain;
+  -webkit-mask-position: center;
   mask-position: center;
+  -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
 
@@ -552,22 +563,26 @@ img {
 .social-link-vk::before {
   width: 24px;
   height: 14px;
+  -webkit-mask-image: url("../images/icons/vk.svg");
   mask-image: url("../images/icons/vk.svg");
 }
 
 .social-link-tg::before {
   width: 18px;
   height: 15px;
+  -webkit-mask-image: url("../images/icons/telegram.svg");
   mask-image: url("../images/icons/telegram.svg");
 }
 
 .social-link-yt::before {
   width: 22px;
   height: 17px;
+  -webkit-mask-image: url("../images/icons/youtube.svg");
   mask-image: url("../images/icons/youtube.svg");
 }
 
 .page-footer-phone {
+  max-width: 400px;
   font-family: inherit;
   font-size: 40px;
   line-height: 40px;
@@ -600,18 +615,22 @@ img {
   width: 115px;
   height: 33px;
   background-color: #000000;
+  -webkit-mask-image: url("../images/icons/html-academy.svg");
   mask-image: url("../images/icons/html-academy.svg");
+  -webkit-mask-size: contain;
   mask-size: contain;
+  -webkit-mask-position: center;
   mask-position: center;
+  -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
 
-.page-footer-academy-link:hover .page-footer-academy-icon,
-.page-footer-academy-link:focus-visible .page-footer-academy-icon {
+.page-footer-academy-link:hover::before,
+.page-footer-academy-link:focus-visible::before {
   background-color: #756157;
 }
 
-.page-footer-academy-link:active .page-footer-academy-icon {
+.page-footer-academy-link:active::before {
   background-color: rgba(117, 97, 87, 0.3);
 }
 
@@ -674,6 +693,7 @@ img {
 .breadcrumbs-link:not(.breadcrumbs-link-current):hover {
   color: rgba(255, 255, 255, 0.6);
 }
+
 .breadcrumbs-link:not(.breadcrumbs-link-current):focus-visible {
   color: rgba(255, 255, 255, 1);
 }
@@ -739,27 +759,29 @@ img {
 }
 
 .control-input {
+  -webkit-appearance: none;
   appearance: none;
 }
 
 .control {
   position: relative;
-
   display: block;
   padding-left: 36px;
-
   line-height: 23px;
   color: #ffffff;
+  cursor: pointer;
+}
+
+.control:has(.control-input:disabled) {
+  cursor: default;
 }
 
 .control-mark {
   position: absolute;
   top: 2px;
   left: 0;
-
   width: 20px;
   height: 20px;
-
   background-color: #ffffff;
   border-radius: 4px;
 }
@@ -769,7 +791,6 @@ img {
   font-size: 18px;
   line-height: 23px;
   word-break: break-all;
-
   transition: opacity 0.3s ease;
 }
 
@@ -788,17 +809,14 @@ img {
   opacity: 0.3;
 }
 
-
 /* Checkbox */
 .control-input[type="checkbox"]:checked + .control-mark::before {
   content: "";
-  position:absolute;
+  position: absolute;
   top: 6px;
   left: 4px;
-
   width: 13px;
   height: 10px;
-
   background: url("../images/icons/tick.svg");
 }
 
@@ -814,7 +832,6 @@ img {
   left: 5px;
   width: 10px;
   height: 10px;
-
   background: #3f5e72;
   border-radius: 50%;
 }
@@ -823,6 +840,7 @@ img {
 .control-input:disabled ~ .control-label {
   opacity: 0.3;
   pointer-events: none;
+  cursor: default;
 }
 
 .filter-group-price {
@@ -838,7 +856,7 @@ img {
 }
 
 .range-wrapper-input:not(:last-child) {
-  margin-bottom: 44px
+  margin-bottom: 44px;
 }
 
 .range-wrapper-input {
@@ -858,7 +876,7 @@ img {
 }
 
 .range-input:hover,
-.range-input:focus-visible  {
+.range-input:focus-visible {
   background-color: #e6e6e6;
 }
 
@@ -889,6 +907,7 @@ img {
   right: 20px;
   z-index: 1;
   font-size: 18px;
+  color: #000000;
   opacity: 0.3;
 }
 
@@ -926,7 +945,6 @@ img {
 
 .range-toggle:focus-visible {
   background: #ffffff;
-  outline: 3px solid #83b3d3;
   box-shadow: 0 4px 10px 0 hsla(0, 0%, 0%, 0.25);
 }
 
@@ -957,7 +975,7 @@ img {
 }
 
 .catalog-wrapper {
-  padding: 0 70px 60px
+  padding: 0 70px 60px;
 }
 
 .sort-wrapper {
@@ -988,14 +1006,22 @@ img {
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+  -webkit-appearance: none;
   appearance: none;
-}
-
-.catalog-select {
-  background-image: url('../images/icons/arrow-down.svg');
+  background-image: url("../images/icons/arrow-down.svg");
   background-size: 12px 7px;
   background-position: 260px center;
   background-repeat: no-repeat;
+}
+
+.catalog-select:hover {
+  border-color: #82b3d3;
+}
+
+.catalog-select:disabled {
+  color: rgba(0, 0, 0, 0.3);
+  border-color: rgba(0, 0, 0, 0.3);
+  cursor: not-allowed;
 }
 
 .catalog-view {
@@ -1018,6 +1044,11 @@ img {
   height: 48px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+}
+
+.catalog-view-toggle:hover,
+.catalog-view-toggle:active {
+  border-color: #000000;
 }
 
 .catalog-view-toggle-active {
@@ -1066,11 +1097,11 @@ img {
 }
 
 .hotel-card-inner {
-  height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto 1fr auto auto auto;
   gap: 15px 20px;
+  height: 100%;
   padding: 20px;
   box-shadow: 0 0 0 1px #e5e5e5;
   border-radius: 4px;
@@ -1079,9 +1110,6 @@ img {
 
 .hotel-card-image-link {
   grid-column: 1 / -1;
-}
-
-.hotel-card-image-link {
   overflow: hidden;
 }
 
@@ -1091,10 +1119,9 @@ img {
 
 .hotel-card-title {
   grid-column: 1 / -1;
-  margin: 0 ;
+  margin: 0;
   font-size: 24px;
   line-height: 32px;
-
 }
 
 .hotel-card-title-link {
@@ -1190,7 +1217,7 @@ img {
 }
 
 .pagination-item-ellipsis {
-  padding: 16px 20px;
+  padding: 16px 22px;
 }
 
 .pagination-link:hover,
@@ -1199,7 +1226,7 @@ img {
 }
 
 .pagination-link:active {
-  color: rgba(255, 255, 255, 0.3);;
+  color: rgba(255, 255, 255, 0.3);
   background-color: #82b3d3;
 }
 
@@ -1327,7 +1354,7 @@ img {
 
 .search-form .input-date {
   padding-right: 50px;
-  background-image: url("../images/date.svg ");
+  background-image: url("../images/icons/calendar.svg");
   background-repeat: no-repeat;
   background-position: center right 22px;
 }
@@ -1339,12 +1366,11 @@ img {
 .search-form .input-date:hover,
 .search-form .input-date:focus-visible {
   color: hsla(0, 0%, 0%, 0.6);
-
   background-color: #e6e6e6;
 }
 
-.search-form .input-date:focus-visible {
-  outline: 3px solid #83b3d3;
+.search-button {
+  max-width: 500px;
 }
 
 .modal-field-message {
@@ -1419,12 +1445,7 @@ img {
   fill-opacity: 1;
 }
 
-.input-count-button:focus-visible svg {
-  outline: 3px solid #82b3d3;
-  outline-offset: 3px;
-}
-
-.input-count-button:active svg{
+.input-count-button:active svg {
   fill: #000000;
   fill-opacity: 0.2;
 }
@@ -1447,7 +1468,6 @@ img {
 }
 
 /* Tooltip */
-
 .form-label-icon {
   position: relative;
   padding-right: 26px;
@@ -1503,9 +1523,9 @@ img {
 
 .tooltip-text::after {
   content: "";
-  position:absolute;
-  left:0;
-  right:0;
+  position: absolute;
+  left: 0;
+  right: 0;
   bottom: 100%;
   width: 19px;
   height: 9px;
